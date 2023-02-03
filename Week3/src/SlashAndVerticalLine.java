@@ -13,11 +13,6 @@ public class SlashAndVerticalLine {
         int number = sc.nextInt();
         for (int x = 1; x <= number; x++) {
             System.out.print((x % 5 == 0) ? "/" : "|");
-//            if (x % 5 == 0) {
-//                System.out.print("/");
-//            } else {
-//                System.out.print("|");
-//            }
         }
     }
 }
