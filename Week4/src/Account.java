@@ -9,7 +9,7 @@ public class Account {
     public String name;
 
     public void deposit(double b) {
-        if (balance >= 0) {
+        if (b >= 0) {
             balance += b;
         } else {
             System.out.println("The balance variable must be greater than or equal to zero.");
@@ -17,7 +17,7 @@ public class Account {
     }
 
     public double withdraw(double b) {
-        if ((balance >= 0) && (balance - b >= 0)) {
+        if ((b >= 0) && (balance - b >= 0)) {
             balance -= b;
             return b;
         } else if (balance - b < 0) {

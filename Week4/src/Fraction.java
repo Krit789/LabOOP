@@ -17,13 +17,13 @@ public class Fraction {
         return "" + (topN / (double) btmN);
     }
 
-    public void addFraction(Fraction f) {
-        if (btmN == f.btmN) {
-            topN += f.topN;
-            btmN += f.btmN;
+    public void addFraction(Fraction n) {
+        if (btmN == n.btmN) {
+            topN += n.topN;
+            btmN += n.btmN;
         } else {
-            topN = topN * f.btmN + f.topN * btmN;
-            btmN = btmN * f.btmN;
+            topN = topN * n.btmN + n.topN * btmN;
+            btmN = btmN * n.btmN;
         }
     }
 
