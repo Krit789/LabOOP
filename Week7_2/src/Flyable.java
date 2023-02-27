@@ -5,9 +5,9 @@
  */
 public interface Flyable {
 
-    public void fly();
+    public abstract void fly();
 
-    public void takeOff();
+    public abstract void takeOff();
 
-    public void landing();
+    public abstract void landing();
 }

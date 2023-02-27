@@ -18,7 +18,7 @@ public class Ship extends Vehicle implements Floatable {
     }
 
     public void move(int distance) {
-        for (int i = 0; i < distance; i++){
+        for (int i = 0; i < distance; i++) {
             if (getFuel() < 50) {
                 System.out.println("Fuel is not enough.");
                 break;

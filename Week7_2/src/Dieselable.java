@@ -1,8 +1,11 @@
+
 /**
  *
  * @author Jarukrit
  */
 public interface Dieselable {
-public void startEngine();
-public void stopEngine();
+
+    public abstract void startEngine();
+
+    public abstract void stopEngine();
 }

@@ -64,8 +64,9 @@ public class Plane extends Vehicle implements Flyable {
             System.out.println("Fuel is nearly empty.");
         }
     }
+
     @Override
-    public void takeOff(){
+    public void takeOff() {
         if (getFuel() >= 10) {
             setFuel(getFuel() - 10);
             System.out.println("Plane Already to Take off");
@@ -73,8 +74,9 @@ public class Plane extends Vehicle implements Flyable {
             System.out.println("Fuel is nearly empty.");
         }
     }
+
     @Override
-    public void landing(){
+    public void landing() {
         if (getFuel() >= 10) {
             setFuel(getFuel() - 10);
             System.out.println("Plane Already to Landing");
