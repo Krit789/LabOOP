@@ -25,6 +25,6 @@ public class Player {
     }
 
     public boolean isSameTeam(Player p) {
-        return (this.getTeam().equals(p.getTeam()));
+        return (getTeam().equals(p.getTeam()));
     }
 }

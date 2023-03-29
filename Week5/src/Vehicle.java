@@ -19,6 +19,6 @@ public class Vehicle {
         return topSpeed;
     }
     public void showInfo(){
-        System.out.println("Fuel is "+ this.getFuel() + " litre and Top Speed is " + this.getTopSpeed() + " m/s.");
+        System.out.println("Fuel is "+ getFuel() + " litre and Top Speed is " + getTopSpeed() + " m/s.");
     }
 }

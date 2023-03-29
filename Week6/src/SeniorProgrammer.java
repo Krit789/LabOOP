@@ -29,6 +29,7 @@ public class SeniorProgrammer extends Programmer {
             setHappiness(getHappiness() - 5);
         }
 
+
     }
 
     public void compliment(Programmer p) {

@@ -25,7 +25,7 @@ public class FootballPlayer extends Player {
     }
 
     public boolean isSamePosition(FootballPlayer p) {
-        return ((this.getTeam().equals(p.getTeam())))
-                && (this.getPosition().equals(p.getPosition()));
+        return ((p.getTeam().equals(this.getTeam())))
+                && (p.getPosition().equals(this.getPosition()));
     }
 }

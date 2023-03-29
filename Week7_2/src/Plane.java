@@ -23,7 +23,7 @@ public class Plane extends Vehicle implements Flyable {
         this.airline = airline;
     }
 
-    public String getAriline() {
+    public String getAirline() {
         return airline;
     }
 
@@ -39,7 +39,7 @@ public class Plane extends Vehicle implements Flyable {
     public void startEngine() {
         if (getFuel() >= 20) {
             setFuel(getFuel() - 20);
-            System.out.println("Plane's Engine starts");
+            System.out.println("Plane’s Engine starts");
         } else {
             System.out.println("Fuel is not enough.");
         }
@@ -47,7 +47,7 @@ public class Plane extends Vehicle implements Flyable {
 
     @Override
     public void stopEngine() {
-        System.out.println("Plane's Engine stops");
+        System.out.println("Plane’s Engine stops");
     }
 
     @Override
@@ -69,7 +69,7 @@ public class Plane extends Vehicle implements Flyable {
     public void takeOff() {
         if (getFuel() >= 10) {
             setFuel(getFuel() - 10);
-            System.out.println("Plane Already to Take off");
+            System.out.println("Plane Already to Take Off");
         } else {
             System.out.println("Fuel is nearly empty.");
         }

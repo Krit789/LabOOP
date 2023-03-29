@@ -26,13 +26,14 @@ public class Car extends Vehicle {
         setTypeEngine(y);
 
     }
-    public void move(){
-        if (super.getFuel() - 50 < 0) {
+
+    public void move() {
+        if (getFuel() - 50 < 0) {
             System.out.println("Please add fuel.");
         } else {
-            super.setFuel(super.getFuel() - 50);
+            setFuel(getFuel() - 50);
             System.out.println("Move.");
         }
-        
+
     }
 }

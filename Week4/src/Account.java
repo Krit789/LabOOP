@@ -20,7 +20,7 @@ public class Account {
         if ((b >= 0) && (balance - b >= 0)) {
             balance -= b;
             return b;
-        } else if (balance - b < 0) {
+        } else if ((balance - b < 0) && (b >= 0)) {
             System.out.println("Your account balance is insufficient.");
         } else {
             System.out.println("The balance variable must be greater than or equal to zero.");
