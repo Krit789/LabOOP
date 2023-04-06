@@ -11,11 +11,11 @@ import javax.swing.border.EmptyBorder;
  */
 public class TellerGUI {
 
-    private JFrame frame;
-    private JPanel subPanel1, subPanel2, subPanel3, subPanel4;
-    private JLabel balanceLabel, amountLabel;
-    private JTextField balanceField, amountField;
-    private JButton depositButton, withdrawButton, exitButton;
+    private final JFrame frame;
+    private final JPanel subPanel1, subPanel2, subPanel3, subPanel4;
+    private final JLabel balanceLabel, amountLabel;
+    private final JTextField balanceField, amountField;
+    private final JButton depositButton, withdrawButton, exitButton;
     private int balance = 6000;
 
     public TellerGUI() {
@@ -42,38 +42,8 @@ public class TellerGUI {
         subPanel3 = new JPanel();
         subPanel3.setLayout(new FlowLayout());
         depositButton = new JButton("Deposit");
-        depositButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                try {
-                    balance += Integer.parseInt(amountField.getText());
-                    balanceField.setText(balance + "");
-                    amountField.setText("");
-                } catch (Exception ignored) {
-                }
-
-            }
-        });
         withdrawButton = new JButton("Withdraw");
-        withdrawButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                try {
-                    balance -= Integer.parseInt(amountField.getText());
-                    balanceField.setText(balance + "");
-                    amountField.setText("");
-                } catch (Exception ignored) {
-                }
-
-            }
-        });
         exitButton = new JButton("Exit");
-        exitButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.exit(0);
-            }
-        });
         subPanel3.add(depositButton);
         subPanel3.add(withdrawButton);
         subPanel3.add(exitButton);

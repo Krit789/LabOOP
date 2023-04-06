@@ -10,13 +10,13 @@ import java.awt.event.ActionListener;
  */
 public class MDIFromGUI {
 
-    private JFrame frame;
-    private JDesktopPane desktop;
+    private final JFrame frame;
     private JInternalFrame subWindow;
-    private JMenuBar menuBar;
-    private JMenu fileMenu, editMenu, viewMenu, newSubMenu;
-    private JMenuItem openFileMenu, saveFileMenu, exitFileMenu;
-    private JMenuItem windowNewMenu, messageNewMenu;
+    private final JDesktopPane desktop;
+    private final JMenuBar menuBar;
+    private final JMenu fileMenu, editMenu, viewMenu, newSubMenu;
+    private final JMenuItem openFileMenu, saveFileMenu, exitFileMenu;
+    private final JMenuItem windowNewMenu, messageNewMenu;
     private int count = 0;
 
     public MDIFromGUI() {
@@ -31,7 +31,7 @@ public class MDIFromGUI {
         windowNewMenu.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                spawnWindow();
+                spawnWindow(200, 400);
             }
         });
         messageNewMenu = new JMenuItem("Message");
@@ -68,14 +68,15 @@ public class MDIFromGUI {
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setVisible(true);
         frame.setSize(1280, 720);
-        spawnWindow();
-        spawnWindow();
-        spawnWindow();
+        spawnWindow(100, 100);
+        spawnWindow(400, 300);
+        spawnWindow(750, 250);
 
     }
 
-    private void spawnWindow() {
+    private void spawnWindow(int x, int y) {
         subWindow = new JInternalFrame("Application " + count++, true, true, true, true);
+        subWindow.setLocation(x, y);
         subWindow.setSize(320, 240);
         subWindow.setVisible(true);
         desktop.add(subWindow);

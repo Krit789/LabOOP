@@ -29,73 +29,15 @@ public class CalculatorOneGUI {
         buttonPanel.setLayout(new FlowLayout());
 
         plusButton = new JButton("บวก");
-        plusButton.setFont(new Font("TH SarabunPSK", Font.BOLD, 18));
-        plusButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                try {
-                    double oper1 = Double.parseDouble(operatorField1.getText());
-                    double oper2 = Double.parseDouble(operatorField2.getText());
-                    resultField.setText(String.valueOf(oper1 + oper2));
-
-                } catch (Exception ignored) {
-                    resultField.setText("ERROR");
-                }
-
-            }
-        });
+        plusButton.setFont(new Font("Angsana New", Font.BOLD, 18));
 
         minusButton = new JButton("ลบ");
-        minusButton.setFont(new Font("TH SarabunPSK", Font.BOLD, 18));
-
-        minusButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                try {
-                    double oper1 = Double.parseDouble(operatorField1.getText());
-                    double oper2 = Double.parseDouble(operatorField2.getText());
-                    resultField.setText(String.valueOf(oper1 - oper2));
-
-                } catch (Exception ignored) {
-                    resultField.setText("ERROR");
-                }
-
-            }
-        });
+        minusButton.setFont(new Font("Angsana New", Font.BOLD, 18));
 
         multiplyButton = new JButton("คูณ");
-        multiplyButton.setFont(new Font("TH SarabunPSK", Font.BOLD, 18));
-        multiplyButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                try {
-                    double oper1 = Double.parseDouble(operatorField1.getText());
-                    double oper2 = Double.parseDouble(operatorField2.getText());
-                    resultField.setText(String.valueOf(oper1 * oper2));
-
-                } catch (Exception ignored) {
-                    resultField.setText("ERROR");
-                }
-
-            }
-        });
+        multiplyButton.setFont(new Font("Angsana New", Font.BOLD, 18));
         divideButton = new JButton("หาร");
-        divideButton.setFont(new Font("TH SarabunPSK", Font.BOLD, 18));
-
-        divideButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                try {
-                    double oper1 = Double.parseDouble(operatorField1.getText());
-                    double oper2 = Double.parseDouble(operatorField2.getText());
-                    resultField.setText(String.valueOf(oper1 / oper2));
-
-                } catch (Exception ignored) {
-                    resultField.setText("ERROR");
-                }
-
-            }
-        });
+        divideButton.setFont(new Font("Angsana New", Font.BOLD, 18));
         buttonPanel.add(plusButton);
         buttonPanel.add(minusButton);
         buttonPanel.add(multiplyButton);
